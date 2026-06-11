@@ -198,6 +198,52 @@ nav {
     font-size: 15px;
 }
 
+/* App Store CTA ------------------------------------------------- */
+
+.app-store-cta {
+    display: inline-block;
+    margin-top: 28px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    line-height: 0;            /* prevents inline-baseline ghost gap under the svg */
+    filter: drop-shadow(0 12px 24px rgba(94, 170, 184, 0.18));
+}
+
+.app-store-cta:hover {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 18px 28px rgba(94, 170, 184, 0.30));
+}
+
+.app-store-cta img {
+    height: auto;              /* keep aspect ratio when the svg scales */
+    max-width: 100%;
+    border-radius: 9px;        /* matches the inner radius of Apple's badge artwork */
+}
+
+.app-store-cta.footer-cta {
+    margin-top: 28px;
+    margin-bottom: 24px;
+    filter: drop-shadow(0 6px 14px rgba(94, 170, 184, 0.20));
+}
+
+/* Nav-bar pill that mirrors the App Store badge in tone but stays
+   text-only so the sticky header doesn't shout. */
+.nav-cta {
+    color: var(--text-primary) !important;
+    background: linear-gradient(135deg, var(--accent), var(--lavender));
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 13px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 14px rgba(94, 170, 184, 0.25);
+}
+
+.nav-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(94, 170, 184, 0.40);
+    color: var(--text-primary) !important;
+}
+
 /* Sections (features / support / privacy) ----------------------- */
 
 section {
